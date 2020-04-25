@@ -3,7 +3,7 @@ const { constants, writeFile } = require('fs');
 writeFile(
   './data/newapp.log',
   '163.3.217.18 - - [21/09/2019:10:07:21 -0500] "GET /dot-com" 405 21512',
-  { mode: constants.S_IWUSR | constants.S_IRUSR },
+  { encoding: 'base64' },
   (err) => {
     err ? console.error(err) : console.log('Filed modified');
   }
